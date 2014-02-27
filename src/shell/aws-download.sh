@@ -1,0 +1,26 @@
+#!/bin/bash
+
+declare -a arr=(
+    2014-02-26T20:00:00.000-0osF6CGyqgsrJXEAAAAA.log
+    2014-02-26T20:00:00.000-J-MMyXA48T1erS4AAAAA.log
+    2014-02-26T20:00:00.000-_Rsq6LAdCxpSQKMAAAAA.log
+    2014-02-26T20:00:00.000-vmiD0ZBpn4WxQ4YAAAAA.log
+    2014-02-26T20:15:00.000-Vy5j2RqeMXcmSDgAAAAA.log
+    2014-02-26T20:15:00.000-n_hawRwrv_O1BCAAAAAA.log
+    2014-02-26T20:15:00.000-wZifmGSLHKDU9oQAAAAA.log
+    2014-02-26T20:15:00.000-ynnaRr6FV8WAM3EAAAAA.log
+    2014-02-26T20:30:00.000-24UFfCefL92rOR0AAAAA.log
+    2014-02-26T20:30:00.000-bdo7vXENq_-lNrIAAAAA.log
+    2014-02-26T20:30:00.000-cRiN0lgLVfaJu4IAAAAA.log
+    2014-02-26T20:30:00.000-omayj9kQS39ScMsAAAAA.log
+    2014-02-26T20:45:00.000-GsY_mexNmdtsVskAAAAA.log
+    2014-02-26T20:45:00.000-i4eg-16TLNBLEIYAAAAA.log
+    2014-02-26T20:45:00.000-jF8R0XBc5S8VMEYAAAAA.log
+    2014-02-26T20:45:00.000-sKvJAKYQ4dewLE8AAAAA.log
+)
+
+for i in "${arr[@]}"
+do
+   aws --profile=fastly-logs s3 cp s3://fastly-logs/theguardian.com/$i ~/Downloads/
+done
+

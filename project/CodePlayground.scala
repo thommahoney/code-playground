@@ -3,21 +3,32 @@ import Keys._
 
 object CodePlayground extends Build {
 
-  val buildSettings = Defaults.defaultSettings ++ Seq(
-    organization := "me.moschops",
+  lazy val defaultSettings = Defaults.defaultSettings ++ Seq(
+    version := "1.0",
     scalaVersion := "2.10.3",
-    scalacOptions := List("-feature", "-deprecation")
+    scalacOptions := Seq(
+      "-feature",
+      "-language:implicitConversions",
+      "-language:postfixOps",
+      "-unchecked",
+      "-deprecation",
+      "-encoding", "utf8",
+      "-Ywarn-adapted-args"
+    ),
+    organization := "me.moschops"
   )
 
   val dependencies = Seq(
-    "com.typesafe.akka" % "akka-agent_2.10" % "2.2.1",
-    "joda-time" % "joda-time" % "2.3",
-    "org.joda" % "joda-convert" % "1.5",
-    "commons-codec" % "commons-codec" % "1.9",
-    "commons-lang" % "commons-lang" % "2.6")
+    "net.databinder.dispatch" %% "dispatch-core" % "0.9.4",
+    "net.liftweb" %% "lift-json" % "2.5.1",
+    "joda-time" % "joda-time" % "2.0",
+    "org.joda" % "joda-convert" % "1.2",
+    "com.gu" %% "fastly-api-client" % "0.1.3",
+    "commons-io" % "commons-io" % "2.1",
+    "commons-lang" % "commons-lang" % "2.5",
+    "org.scalatest" %% "scalatest" % "1.9.1" % "test"
+  )
   
-    lazy val root = Project(id = "CodePlayground",
-                            base = file(".")).settings(libraryDependencies ++= dependencies)
-
-
+  lazy val root = Project(id = "CodePlayground",
+    base = file(".")).settings(libraryDependencies ++= dependencies)
 }
