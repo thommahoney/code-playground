@@ -1,5 +1,3 @@
-// Good explanations
-
 //
 // Example 1
 //
