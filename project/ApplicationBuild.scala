@@ -1,7 +1,7 @@
 import sbt._
 import Keys._
 
-object CodePlayground extends Build {
+object ApplicationBuild extends Build {
 
   lazy val defaultSettings = Defaults.defaultSettings ++ Seq(
     version := "1.0",
