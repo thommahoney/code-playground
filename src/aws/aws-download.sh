@@ -1,7 +1,7 @@
 #!/bin/bash
 
-bucket=guardian.co.uk
-filter=2014-02-27T15:
+bucket=theguardian.com
+filter=2014-03-18T08:00
 
 declare -a arr=($(aws --profile=fastly-logs s3 ls s3://fastly-logs/$bucket/$filter | sed 's/^.* .* //g'))
 
