@@ -26,6 +26,7 @@ object ApplicationBuild extends Build {
     "com.gu" %% "fastly-api-client" % "0.1.3",
     "commons-io" % "commons-io" % "2.1",
     "commons-lang" % "commons-lang" % "2.5",
+    "commons-codec" % "commons-codec" % "1.9",
     "org.scalatest" %% "scalatest" % "1.9.1" % "test"
   )
   
