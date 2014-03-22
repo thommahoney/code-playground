@@ -6,14 +6,19 @@ object ApplicationBuild extends Build {
   lazy val defaultSettings = Defaults.defaultSettings ++ Seq(
     version := "1.0",
     scalaVersion := "2.10.4",
+    // scalac -help
+    // scalac -X
     scalacOptions := Seq(
-      "-feature",
-      "-language:implicitConversions",
-      "-language:postfixOps",
-      "-unchecked",
       "-deprecation",
-      "-encoding", "utf8",
-      "-Ywarn-adapted-args"
+      "-encoding", "UTF8",
+      "–explaintypes",
+      "-feature",
+      "–optimise",
+      "-unchecked",
+      "–Xcheck-null",
+      "–Xcheckinit",
+      "–Xlog-implicits",
+      "–Xlint"
     ),
     organization := "me.moschops"
   )
