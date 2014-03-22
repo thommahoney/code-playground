@@ -26,6 +26,6 @@ A playground for code tutorials and code examples.
 
 ### General reading
    * [http://wblinks.com/notes/aws-tips-i-wish-id-known-before-i-started/](http://wblinks.com/notes/aws-tips-i-wish-id-known-before-i-started/)
-   * [Is TLS fasty yet?](https://istlsfastyet.com/)
+   * [Is TLS fast yet?](https://istlsfastyet.com/)
 
 ### Videos
